@@ -9,15 +9,15 @@ h2 {
 }
 
 body {
-  font-family: Impact, Charcoal, sans-serif;
+  font-family: "Arial Black", Gadget, sans-serif;
   text-align: center;
-  background-image: url("back.jpg");
-  background-size: cover;
+  background-color: #12a163;
+  color: #ff1a4c;
 }
 
 .player {
   width: 90%;
-  height: 30vh;
+  height: 216px;;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -26,7 +26,7 @@ body {
 
 .dealer {
   width: 90%;
-  height: 30vh;
+  height: 216px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -34,7 +34,7 @@ body {
 }
 
 .card {
-  width: 15%;
+  width: 200px;
   height: 100%;
 }
 
@@ -52,12 +52,12 @@ button {
   height: 50px;
   border: 2px solid black;
   text-align: center;
-  background-color: white;
+  background-color: #ff721a;
   font-weight: bold;
   font-size: 18px;
+  border-radius: 25px;
 }
 
-#resultsB {
-  color: red;
-
+button:hover {
+  background-color: #ff1a4c
 }
