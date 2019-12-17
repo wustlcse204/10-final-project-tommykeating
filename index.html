@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSE 204 - Assignment 10 Creative Project</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="functions.js"></script>
+    </head>
+    <body onload="Shuffle()">
+      <h1>Tommy's Blackjack Table</h1>
+      <h2>Dealer's Hand</h2>
+      <div class = "dealer" id = "dealerhand">
+
+      </div>
+      <br>
+      <h2>Player's Hand</h2>
+      <div class = "player" id = "playerhand">
+
+      </div>
+      <br>
+      <button id = "hitB" onclick="Draw()"> Hit </button>
+      <button id = "foldB" onclick="Fold()"> Fold </button>
+      <button id = "resultsB" onclick="Results()"> Results </button>
+      <button id = "shufB" onclick="Shuffle()"> Next Game </button>
+    </body>
+</html>
