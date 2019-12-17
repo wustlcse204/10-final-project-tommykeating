@@ -5,12 +5,14 @@ h1 {
 
 h2 {
   text-decoration: underline;
+  font-size: 28px;
 }
 
 body {
   font-family: Impact, Charcoal, sans-serif;
-  background-color: green;
   text-align: center;
+  background-image: url("back.jpg");
+  background-size: cover;
 }
 
 .player {
