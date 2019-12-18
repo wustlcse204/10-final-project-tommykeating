@@ -89,7 +89,7 @@ function PCards()
         playerValue = playerValue + Number(display.cards[i].value);
       }
     }
-    if(playerValue == 22)
+    if(playerValue >= 21)
     {
       Fold();
     }
