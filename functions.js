@@ -89,6 +89,10 @@ function PCards()
         playerValue = playerValue + Number(display.cards[i].value);
       }
     }
+    if(playerValue == 22)
+    {
+      Fold();
+    }
   })
   .catch(error => console.error('Error:',error));
 }
@@ -150,38 +154,41 @@ function DealerDraw()
   .then(function (display)
   {
     let j = 0;
-    while(dealdraw)
+    if(dealerValue <= 19)
     {
-      if(dealerValue > playerValue && dealerValue <= 21)
+      while(dealdraw)
       {
-        dealdraw = false;
-        break;
-      }
-      let cardI = document.createElement("img");
-      let cardD = document.createElement("div");
-      cardI.src = display.cards[j].image;
-      cardD.appendChild(cardI);
-      cardD.setAttribute("class", "card")
-      document.getElementById("dealerhand").appendChild(cardD);
-      if(display.cards[j].value == "KING" || display.cards[j].value == "QUEEN" || display.cards[j].value == "JACK")
-      {
-        dealerValue = dealerValue + 10;
-      }
-      else if(display.cards[j].value == "ACE")
-      {
-        dealerValue = dealerValue + 11;
-      }
-      else
-      {
-        dealerValue = dealerValue + Number(display.cards[j].value);
-      }
-      if(dealerValue >= 21)
-      {
-        dealdraw = false;
-      }
-      if(j < 7)
-      {
-        j++;
+        if(dealerValue > playerValue && dealerValue <= 21)
+        {
+          dealdraw = false;
+          break;
+        }
+        let cardI = document.createElement("img");
+        let cardD = document.createElement("div");
+        cardI.src = display.cards[j].image;
+        cardD.appendChild(cardI);
+        cardD.setAttribute("class", "card")
+        document.getElementById("dealerhand").appendChild(cardD);
+        if(display.cards[j].value == "KING" || display.cards[j].value == "QUEEN" || display.cards[j].value == "JACK")
+        {
+          dealerValue = dealerValue + 10;
+        }
+        else if(display.cards[j].value == "ACE")
+        {
+          dealerValue = dealerValue + 11;
+        }
+        else
+        {
+          dealerValue = dealerValue + Number(display.cards[j].value);
+        }
+        if(dealerValue >= 21)
+        {
+          dealdraw = false;
+        }
+        if(j < 7)
+        {
+          j++;
+        }
       }
     }
   })
@@ -191,6 +198,10 @@ function DealerDraw()
 function Results()
 {
   if(dealerValue == playerValue == 21)
+  {
+    alert("Tie, the House wins!");
+  }
+  if(dealerValue == playerValue)
   {
     alert("Tie, the House wins!");
   }
