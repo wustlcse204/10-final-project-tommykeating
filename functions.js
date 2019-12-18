@@ -154,7 +154,7 @@ function DealerDraw()
   .then(function (display)
   {
     let j = 0;
-    if(dealerValue <= 19)
+    if(dealerValue <= 21)
     {
       while(dealdraw)
       {
